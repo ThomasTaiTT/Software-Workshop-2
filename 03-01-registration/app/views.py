@@ -21,6 +21,6 @@ def login():
 def registration():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Registration for {form.username.data} received')
+        flash(f'Registration for {form.username.data} received', 'success')
         return redirect(url_for('index'))
     return render_template('registration.html', title='Register', form=form)
