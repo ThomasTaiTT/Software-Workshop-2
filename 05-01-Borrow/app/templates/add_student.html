@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }}<br/>{{ form.username(size=30) }}
+        </div>
+        <div>
+            {{ form.firstname.label }}<br/>{{ form.firstname(size=30) }}
+        </div>
+        <div>
+            {{ form.lastname.label }}<br/>{{ form.lastname(size=30) }}
+        </div>
+        <div>
+            {{ form.email.label }}<br/>{{ form.email(size=30) }}
+        </div>
+        <div>{{ form.submit() }}</div>
+    </form>
+
+{% endblock %}
